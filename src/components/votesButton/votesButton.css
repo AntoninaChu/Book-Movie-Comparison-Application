@@ -1,0 +1,26 @@
+.votesButton{
+    display: block;
+    padding:2em 4em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:600;
+    color:#FFFFFF;
+    background-color:#2eb8b8;
+    text-align:center;
+    transition: all 0.2s;
+}
+.votesButton:hover{
+    background-color: #248f8f;
+}
+
+@media all and (max-width:30em){
+     a.button2{
+        display:block;
+        margin:0.2em auto;
+    }
+}
