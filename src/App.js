@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header'
+import Search from './components/search'
+import Image from './components/image'
+import DescriptionContent from './components/descriptionContent'
+import Grades from './components/grades'
+import VotesButton from './components/votesButton'
+
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+          <Header name="This site is created to compare books and movies."/>
+          <Search/>
+          <Switch>
+            <Route path='/image' component={Image} />
+            <Route path='/description' component={DescriptionContent} />
+            <Route path='/vote' component={VotesButton} />
+            <Route path='/grades' component={Grades} />
+          </Switch>
+      </BrowserRouter>
   );
 }
 
